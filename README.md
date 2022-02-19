@@ -1,4 +1,4 @@
-**Bioinformatics_for_turkish**
+**Biyoinformatik_TR**
 
 Türkiye'de biyoinformatik alanında varolan bilgi birikimi ve paylaşımı açıklarını kapatmaya yarayacak
 Online bazı kaynakların çevirisini de içeren bir kaynak oluşturmaya çalışacağım.
