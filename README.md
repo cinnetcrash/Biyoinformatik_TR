@@ -7,7 +7,7 @@ Bu kapsamda planlanan eğitim akış şeması aşağıdaki gibidir. Eğitim akı
 
 Bu eğitim sonunda aşağıdaki sorulara cevap bulabileceksiniz.
 
-1 - Biyoinformatik nedir?
+1 - Biyoinformatik nedir?\n
 2 - Biyoinformatiğin kullanım alanları nelerdir?
 3 - Biyoinformatikte kullanılan önemli kavramlar ve açıklamaları
 4 - Veritabanları, çeşitleri ve kullanım alanları
