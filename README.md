@@ -7,14 +7,14 @@ Bu kapsamda planlanan eğitim akış şeması aşağıdaki gibidir. Eğitim akı
 
 Bu eğitim sonunda aşağıdaki sorulara cevap bulabileceğinizi umuyorum.
 
-1. Biyoinformatik nedir?
-2. Biyoinformatiğin kullanım alanları nelerdir?
+1. Biyoinformatik ve Tarihçesi
+2. Biyoinformatiğin Kullanım Alanları
 3. Biyoinformatikte kullanılan önemli kavramlar ve açıklamaları
-5. Dizi analizi
+5. Dizi analizine Giriş
 - Sanger Dizileme
 - Yeni nesil dizileme 
-- 3. Nesil Dizileme (Uzun Okuma)
-7. Dizi Analizi çeşitleri
+- Nesil Dizileme (Uzun Okuma)
+7. Dizi Analizinde Kullanılan Yöntemler
 8. Biyolojik veri tabanları
 - Primer
 - Sekonder
@@ -23,3 +23,4 @@ Bu eğitim sonunda aşağıdaki sorulara cevap bulabileceğinizi umuyorum.
 9. Dizi karşılaştırma ve Dizi Bazlı Veritabanı Aramaları
 10. Fonksiyonel Genom Analizi
 11. Tersine Aşı Çalışmaları
+12. Biyoinformatik uygulamaları
