@@ -1,8 +1,16 @@
-***Linux file system is generally a built-in layer of a Linux operating system used to handle the data management of the storage. It helps to arrange the file on the disk storage. It manages the file name, file size, creation date, and much more information about a file.***
+Exercise:
 
-/ or /root: root user's home directory which is separate from other users
-/home: contains home directories of all non-root users.
-/bin(stands for binaries): executables for most essential user commands(all files are system-wide usable)
-
-
-
+1 - Create a file named dosyam.txt
+2 - Open the file with nano
+3 - Insert 3 sequences in it Eg.
+>DNA1
+ATGTAGATGAGATAGATGATG
+>DNA2
+AGAGAGAT
+>DNA3
+GAGAGAGAGATGTATTTATGAG
+>DNA4
+AGAGAGAGagagaGAGAGAGATAGACCCC
+	4 - Change the file permissions 
+	5 - Copy this file to one upper folder
+	6 - Remove the old one
