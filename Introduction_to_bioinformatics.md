@@ -1,16 +1,8 @@
+***Linux file system is generally a built-in layer of a Linux operating system used to handle the data management of the storage. It helps to arrange the file on the disk storage. It manages the file name, file size, creation date, and much more information about a file.***
 
-Demonstrations (15-20 min)
+/ or /root: root user's home directory which is separate from other users
+/home: contains home directories of all non-root users.
+/bin(stands for binaries): executables for most essential user commands(all files are system-wide usable)
 
-1 - What is Unix/Linux?
-2- Introducing the Command Line 
-3- Manual and –help commands
-4- cd, mkdir, ls, pipe, wc
-5- File authorizations
-6- more, less, cat, grep, history, cp, mv
-7- Text Editing Tools (nano, gedit, vi, vim)
-8- Downloading with wget
-9- How to open a downloaded file
-10- How to open a file to install
-11- Installing a program
-12- Using an installed program
-13- Bash scripting
+
+
