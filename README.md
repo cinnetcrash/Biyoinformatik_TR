@@ -19,6 +19,19 @@ $ rm
 
 ~~~
 
+## Other Commands
+~~~ {.bash}
+$ head
+$ tail
+$ more
+$ less
+$ cat
+$ touch
+$ cp
+$ mv
+~~~
+
+
 ## Exercises
 
 * Q1 - What basic linux commands could help us quickly peek at the files?
