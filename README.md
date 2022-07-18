@@ -78,4 +78,33 @@ $ for filename in *.zip
 > done
 ~~~
 
+* Q4 - Use the gzip command to compress the file sample_1.fastq. Use gunzip to decompress it back to the original contents
+
+Use the above commands along with *man* and *ls* to see what happens to the file.
+
+Answer : 
+
+* Q5 - How many reads are contained in the file sample_1.fastq?
+
+Examine some of the file to work out how many lines each *read* takes up.
+
+Answer : 
+
+
+
+## Working with collections of files; conditionals
+
+~~~ {.bash}
+for i in *
+do
+   if [ -f $i ]; then
+      echo $i is a file
+   elif [ -d $i ]; then
+      echo $i is a directory
+   fi
+   done
+~~~
+
+
+
 
