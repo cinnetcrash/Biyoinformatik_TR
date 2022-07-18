@@ -8,6 +8,17 @@ The **shell** is a command line interface program that allows you to control you
 
 * Cloud computers can only be accessed through command line interfaces.
 
+## Basic Commands
+~~~ {.bash}
+$ ls
+$ mkdir
+$ cd
+$ pwd
+$ whoami
+$ rm
+
+~~~
+
 ## Exercises
 
 * Q1 - What basic linux commands could help us quickly peek at the files?
