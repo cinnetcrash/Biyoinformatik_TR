@@ -30,9 +30,31 @@ $ touch
 $ cp
 $ mv
 ~~~
+## Loops
+Loops can really improve productivity through automation as they allow us to execute commands repetitively. Like to wildcards and tab completion, using loops also reduces the amount of typing (and typing mistakes).
+
+In the next portion, we will build loops that do something to a large number of files.
+
+~~~ {.bash}
+$ for i in sequence.*
+> do
+>    echo $i
+> done
+~~~
 
 
-## Exercises
+
+## Bash Scripts
+
+You can replace echo with wc and execute it.
+
+~~~ {.bash}
+for file in *.fastq
+do
+	wc ${file}
+done
+~~~
+
 
 * Q1 - What basic linux commands could help us quickly peek at the files?
 
@@ -47,4 +69,13 @@ or
 
 wc -l SRR030257_1.fastq
 
-* Q3 - 
+* Q3 - Here is the for loop you wrote for unzipping .zip files:
+
+~~~ {.bash}
+$ for filename in *.zip
+> do
+> unzip $filename
+> done
+~~~
+
+
