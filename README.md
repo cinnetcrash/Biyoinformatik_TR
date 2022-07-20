@@ -8,7 +8,9 @@ The **shell** is a command line interface program that allows you to control you
 
 * Cloud computers can only be accessed through command line interfaces.
 
-## Basic Commands
+## Basic Navigation Commands
+
+
 ~~~ {.bash}
 $ head
 ~~~
@@ -38,20 +40,32 @@ $ rm
 ~~~
 
 
+
 ~~~ {.bash}
-$ head
+$ less
+~~~
+
+
+~~~ {.bash}
+$ cat
 ~~~
 
 ~~~ {.bash}
-$ head
-$ tail
-$ more
-$ less
-$ cat
 $ touch
+~~~
+
+~~~ {.bash}
 $ cp
+~~~
+
+~~~ {.bash}
 $ mv
 ~~~
+
+
+
+
+
 ## Loops
 Loops can really improve productivity through automation as they allow us to execute commands repetitively. Like to wildcards and tab completion, using loops also reduces the amount of typing (and typing mistakes).
 
@@ -77,42 +91,12 @@ do
 done
 ~~~
 
-
-* Q1 - What basic linux commands could help us quickly peek at the files?
-
-head, tail, wc -l
-
-* Q2 - How many sequences are in the file?
-
-grep ^@SRR030257 SRR030257_1.fastq | wc -l
-grep --count ^@SRR030257 SRR030257_1.fastq
-
-or 
-
-wc -l SRR030257_1.fastq
-
-* Q3 - Here is the for loop you wrote for unzipping .zip files:
-
 ~~~ {.bash}
 $ for filename in *.zip
 > do
 > unzip $filename
 > done
 ~~~
-
-* Q4 - Use the gzip command to compress the file sample_1.fastq. Use gunzip to decompress it back to the original contents
-
-Use the above commands along with *man* and *ls* to see what happens to the file.
-
-Answer : 
-
-* Q5 - How many reads are contained in the file sample_1.fastq?
-
-Examine some of the file to work out how many lines each *read* takes up.
-
-Answer : 
-
-
 
 ## Working with collections of files; conditionals
 
