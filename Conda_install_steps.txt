@@ -1,0 +1,21 @@
+# Make sure you are in /home/username/
+cd ~
+#***********************************************************************************
+# MEDAKA
+#***********************************************************************************
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+sudo chmod 755 Miniconda3-latest-Linux-x86_64.sh
+./Miniconda3-latest-Linux-x86_64.sh
+# if asked, press Enter or type yes
+source ~/.bashrc
+# the followıng two commands wıll take some time depending on internet connectivity!
+conda config --set auto_activate_base false
+conda install -n base -c conda-forge mamba --yes
+
+# conda activate # to activate base as precondition for using mamba
+# mamba create -n medaka -c conda-forge -c bioconda medaka --yes
+
+# To activate this environment, use
+# conda activate medaka
+# To deactivate an active environment, use
+# conda deactivate
