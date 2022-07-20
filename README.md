@@ -10,16 +10,38 @@ The **shell** is a command line interface program that allows you to control you
 
 ## Basic Commands
 ~~~ {.bash}
-$ ls
-$ mkdir
-$ cd
-$ pwd
-$ whoami
-$ rm
-
+$ head
 ~~~
 
-## Other Commands
+~~~ {.bash}
+$ ls
+~~~
+
+~~~ {.bash}
+$ mkdir
+~~~
+
+~~~ {.bash}
+$ cd
+~~~
+
+~~~ {.bash}
+$ pwd
+~~~
+
+~~~ {.bash}
+$ whoami
+~~~
+
+~~~ {.bash}
+$ rm
+~~~
+
+
+~~~ {.bash}
+$ head
+~~~
+
 ~~~ {.bash}
 $ head
 $ tail
