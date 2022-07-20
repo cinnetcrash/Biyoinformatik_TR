@@ -7,3 +7,4 @@ Sorular
 3- Dosya isimlerinin olduğu ve sıralandığı bir liste hazırlamak istiyorum nasıl yapabilirim?
 
 
+
