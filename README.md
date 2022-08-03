@@ -10,35 +10,50 @@ The **shell** is a command line interface program that allows you to control you
 
 ## Basic Navigation Commands
 
+Bu komut herhangi bir dosya içerisinde bulunan bilgilerin en üst kısmında bulunan kısmını göremeyi sağlar.
 
 ~~~ {.bash}
-$ head
+$ head -5 dosyaadi.txt
 ~~~
+Bu komut ile "dosyaadi.txt" dosyasının ilk 5 satırını önizleyebilirsiniz.
+
+
+"ls" komutu bulunduğunuz dizin içerisinde bulunan dosyları listelemeye yarar. Listelemek istediğiniz dosyada
+ekstra argümanlar kullanarak daha ayrıntılı bir listeleme yapabilirsiniz.
 
 ~~~ {.bash}
-$ ls
+$ ls -l
 ~~~
+
+"mkdir" komutu size bulunduğunuz dizin içersinde klasör oluşturmaya yardımcı olan bir komuttur.
+Bu komutu kullanarak birden fazla klasörü aynı anda oluşturabilirsiniz.
 
 ~~~ {.bash}
-$ mkdir
+$ mkdir klasör1 klasör2
 ~~~
 
+"cd" komutu "change directory" yani dizin değiştirmeye yarayan çok kullanılan komutlardan bir tanesidir. 
 ~~~ {.bash}
-$ cd
+$ cd klasör1
 ~~~
 
+
+"pwd" komutu bulunduğunuz dizini ekrana yazdırmaya yarayan bir komuttur. 
 ~~~ {.bash}
 $ pwd
 ~~~
+Çıktısı da şu şekilde olmaktadır. "home/user/Desktop/klasor1"
 
+"Whoami" komutu ile o an işlem yaptığınız kullanıcının adını ekrana yazdırabilirsiniz.
 ~~~ {.bash}
 $ whoami
 ~~~
 
+"rm" komutu remove yani silme işlemi yapmaya yaramaktadır. Bu komut kullanılarak genellikle dosyalar silinebilmektedir.
+İsterseniz -r opsiyonunu kullanarak klasörleri de silebilirsiniz.
 ~~~ {.bash}
-$ rm
+$ rm -r
 ~~~
-
 
 
 ~~~ {.bash}
