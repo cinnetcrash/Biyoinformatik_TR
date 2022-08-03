@@ -104,11 +104,13 @@ $ mv dosya2.txt yeni_dosya.txt
 
 
 
-## Loops
-Loops can really improve productivity through automation as they allow us to execute commands repetitively. Like to wildcards and tab completion, using loops also reduces the amount of typing (and typing mistakes).
+# Loops (Döngüler)
+Döngüler, komutları tekrar tekrar yürütmemize izin verdikleri için otomasyon yoluyla verimliliği gerçekten artırabilir. Joker karakterler ve sekme tamamlama gibi, döngüleri kullanmak da yazma miktarını (ve yazım hatalarını) azaltır.
 
-In the next portion, we will build loops that do something to a large number of files.
+Bir sonraki bölümde, çok sayıda dosyaya bir şeyler yapan döngüler oluşturacağız.
 
+
+## bir klasör içerisinde bulunan tüm dosyaların ekrana yazdırılması. 
 ~~~ {.bash}
 $ for i in sequence.*
 > do
@@ -116,11 +118,15 @@ $ for i in sequence.*
 > done
 ~~~
 
+* for kullanılarak herhangi bir döngüyü kendiniz de yaratabilirsiniz. Burada kullanılan **i** değişkeni standart olmamakla birlikte
+* istediğiniz şekilde değiştirilebilmektedir.
 
 
-## Bash Scripts
 
-You can replace echo with wc and execute it.
+# Bash Scripts
+
+echo'yu wc ile değiştirebilir ve çalıştırabilirsiniz.
+
 
 ~~~ {.bash}
 for file in *.fastq
@@ -136,7 +142,7 @@ $ for filename in *.zip
 > done
 ~~~
 
-## Working with collections of files; conditionals
+## Dosya koleksiyonlarıyla çalışmak; şartlı scriptler (conditionals)
 
 ~~~ {.bash}
 for i in *
