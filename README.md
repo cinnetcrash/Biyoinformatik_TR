@@ -9,6 +9,25 @@
 * Bulut bilgisayarlarına yalnızca komut satırı arabirimleri üzerinden erişilebilir.
 
 
+
+## man
+
+Bu komut manual'in kısaltmasıdır. Bu komutu kullanarak herhangi bir program ya da komut ile ilgili yardım alabilirsiniz.
+
+~~~ {.bash}
+$ man whoami
+~~~
+
+
+## help
+
+Help komutu kullanarak bir çok komut veya araç ile ilgili ayrıntılı bilgi alabilirsiniz. Kullanım örneği de aşağıdaki gibidir. 
+
+~~~ {.bash}
+$ less --help
+~~~
+
+
 ## ls 
 komutu bulunduğunuz dizin içerisinde bulunan dosyları listelemeye yarar. Listelemek istediğiniz dosyada
 ekstra argümanlar kullanarak daha ayrıntılı bir listeleme yapabilirsiniz.
@@ -60,6 +79,16 @@ $ head -5 dosyaadi.txt
 ~~~
 * Bu komut ile "dosyaadi.txt" dosyasının ilk 5 satırını önizleyebilirsiniz.
 
+
+## less
+
+~~~ {.bash}
+$ less
+~~~
+
+
+## more
+
 ~~~ {.bash}
 $ less
 ~~~
@@ -102,24 +131,33 @@ $ mv dosya2.txt yeni_dosya.txt
 İki şekilde de kullanabilirsiniz.
 
 
+## chmod
+
+## su
+## sudo
+## sudo apt update / sudo apt-get update
+## sudo apt upgrade / sudo apt-get upgrade
+## df
+## history
+## wget
+## git 
+## exit
+## reboot
+## unzip
+## gunzip / gzip
+## tar
+## pd
+## top / htop
+## Kısayollar
 
 
-# Loops (Döngüler)
-Döngüler, komutları tekrar tekrar yürütmemize izin verdikleri için otomasyon yoluyla verimliliği gerçekten artırabilir. Joker karakterler ve sekme tamamlama gibi, döngüleri kullanmak da yazma miktarını (ve yazım hatalarını) azaltır.
-
-Bir sonraki bölümde, çok sayıda dosyaya bir şeyler yapan döngüler oluşturacağız.
+# Program Yükleme 
+## Programları nereden bulabilirim?
 
 
-## bir klasör içerisinde bulunan tüm dosyaların ekrana yazdırılması. 
-~~~ {.bash}
-$ for i in sequence.*
-> do
->    echo $i
-> done
-~~~
+# Program Çalıştırma
+## Program nasıl çalıştırılır?
 
-* for kullanılarak herhangi bir döngüyü kendiniz de yaratabilirsiniz. Burada kullanılan **i** değişkeni standart olmamakla birlikte
-* istediğiniz şekilde değiştirilebilmektedir.
 
 
 
@@ -154,6 +192,27 @@ do
    fi
    done
 ~~~
+
+
+
+
+# Loops (Döngüler)
+Döngüler, komutları tekrar tekrar yürütmemize izin verdikleri için otomasyon yoluyla verimliliği gerçekten artırabilir. Joker karakterler ve sekme tamamlama gibi, döngüleri kullanmak da yazma miktarını (ve yazım hatalarını) azaltır.
+
+Bir sonraki bölümde, çok sayıda dosyaya bir şeyler yapan döngüler oluşturacağız.
+
+
+## bir klasör içerisinde bulunan tüm dosyaların ekrana yazdırılması. 
+~~~ {.bash}
+$ for i in sequence.*
+> do
+>    echo $i
+> done
+~~~
+
+* for kullanılarak herhangi bir döngüyü kendiniz de yaratabilirsiniz. Burada kullanılan **i** değişkeni standart olmamakla birlikte
+* istediğiniz şekilde değiştirilebilmektedir.
+
 
 
 
