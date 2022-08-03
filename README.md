@@ -9,16 +9,9 @@ The **shell** is a command line interface program that allows you to control you
 * Cloud computers can only be accessed through command line interfaces.
 
 
-## Bu komut herhangi bir dosya içerisinde bulunan bilgilerin en üst kısmında bulunan kısmını göremeyi sağlar.
-
-~~~ {.bash}
-$ head -5 dosyaadi.txt
-~~~
-* Bu komut ile "dosyaadi.txt" dosyasının ilk 5 satırını önizleyebilirsiniz.
-
-
-## komutu bulunduğunuz dizin içerisinde bulunan dosyları listelemeye yarar. Listelemek istediğiniz dosyada
-## ekstra argümanlar kullanarak daha ayrıntılı bir listeleme yapabilirsiniz.
+## ls 
+komutu bulunduğunuz dizin içerisinde bulunan dosyları listelemeye yarar. Listelemek istediğiniz dosyada
+ekstra argümanlar kullanarak daha ayrıntılı bir listeleme yapabilirsiniz.
 
 ~~~ {.bash}
 $ ls -l
@@ -49,30 +42,44 @@ $ pwd
 $ whoami
 ~~~
 
-"rm" komutu remove yani silme işlemi yapmaya yaramaktadır. Bu komut kullanılarak genellikle dosyalar silinebilmektedir.
+## rm
+Bu komutu remove yani silme işlemi yapmaya yaramaktadır. Bu komut kullanılarak genellikle dosyalar silinebilmektedir.
 İsterseniz -r opsiyonunu kullanarak klasörleri de silebilirsiniz.
 ~~~ {.bash}
 $ rm -r
 ~~~
 
+## head
+Bu komut herhangi bir dosya içerisinde bulunan bilgilerin en üst kısmında bulunan kısmını göremeyi sağlar.
+
+~~~ {.bash}
+$ head -5 dosyaadi.txt
+~~~
+* Bu komut ile "dosyaadi.txt" dosyasının ilk 5 satırını önizleyebilirsiniz.
 
 ~~~ {.bash}
 $ less
 ~~~
 
+## cat
 
+info
 ~~~ {.bash}
 $ cat
 ~~~
 
+# touch
 ~~~ {.bash}
 $ touch
 ~~~
+
+# cp
 
 ~~~ {.bash}
 $ cp
 ~~~
 
+## mv
 ~~~ {.bash}
 $ mv
 ~~~
