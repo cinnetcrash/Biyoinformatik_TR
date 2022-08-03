@@ -1,12 +1,12 @@
 # Bash Scripting ile Basit Otomasyon ve Sık Kullanılan Komutlar
 ## Komut Satırı
 
-The **shell** is a command line interface program that allows you to control your computer with a keyboard rather than using your mouse and keyboard to control your computer through a graphical user interface (GUI). It may seem strange and difficult at first, but there are  many reasons master the shell.
+**Kabuk**, bilgisayarınızı bir grafik kullanıcı arabirimi (GUI) aracılığıyla kontrol etmek için farenizi ve klavyenizi kullanmak yerine bir klavye ile kontrol etmenizi sağlayan bir komut satırı arabirim programıdır. İlk başta garip ve zor görünebilir, ancak kabukta ustalaşmanın birçok nedeni vardır.
 
-* Most bioinformatics programs can only be run from the command line. So, you will have to become familiar with the shell if you want to work in genomics or transcriptomics.
-* The shell gives the you power to do your work more efficiently and more quickly. This is the first step toward developing a reproducible research program.
+* Çoğu biyoinformatik programı yalnızca komut satırından çalıştırılabilir. Dolayısıyla, genomik veya transkriptomik çalışmak istiyorsanız kabuğa aşina olmanız gerekecektir.
+* Kabuk, işinizi daha verimli ve daha hızlı yapmanız için size güç verir. Bu, tekrarlanabilir bir araştırma programı geliştirmeye yönelik ilk adımdır.
 
-* Cloud computers can only be accessed through command line interfaces.
+* Bulut bilgisayarlarına yalnızca komut satırı arabirimleri üzerinden erişilebilir.
 
 
 ## ls 
@@ -25,19 +25,22 @@ Bu komutu kullanarak birden fazla klasörü aynı anda oluşturabilirsiniz.
 $ mkdir klasör1 klasör2
 ~~~
 
-"cd" komutu "change directory" yani dizin değiştirmeye yarayan çok kullanılan komutlardan bir tanesidir. 
+## cd 
+Bu komut "change directory" yani dizin değiştirmeye yarayan çok kullanılan komutlardan bir tanesidir. 
+
 ~~~ {.bash}
 $ cd klasör1
 ~~~
 
-
-"pwd" komutu bulunduğunuz dizini ekrana yazdırmaya yarayan bir komuttur. 
+## pwd
+Bu komut bulunduğunuz dizini ekrana yazdırmaya yarayan bir komuttur. 
 ~~~ {.bash}
 $ pwd
 ~~~
 Çıktısı da şu şekilde olmaktadır. "home/user/Desktop/klasor1"
 
-"Whoami" komutu ile o an işlem yaptığınız kullanıcının adını ekrana yazdırabilirsiniz.
+## whoami
+Bu komut ile o an işlem yaptığınız kullanıcının adını ekrana yazdırabilirsiniz.
 ~~~ {.bash}
 $ whoami
 ~~~
@@ -62,28 +65,41 @@ $ less
 ~~~
 
 ## cat
+Bu komut ile herhangi bir dosya içerisinde bulunan tüm bilgiler kabuk ekranına yazdırılabilir.
 
-info
 ~~~ {.bash}
 $ cat
 ~~~
 
-# touch
+
+## touch
+Bu komutu kullanarak hızlı bir şekilde bir veya birden fazla dosya oluşturabilirsiniz.
+
 ~~~ {.bash}
 $ touch
 ~~~
 
-# cp
+## cp
+Bu komutu kullanarak herhangi bir dosyayı kopyalayabilirsiniz. Bu kopyalama işlemi sonrası orjinal dosya silinmeyecektir.
 
 ~~~ {.bash}
-$ cp
+$ cp dosya1.txt ../../hello_world
 ~~~
+bu komut ile dosya1.txt dosyası iki üst klasörde bulunan "hello_world" klasörü içersine kopyalanır.
 
 ## mv
+Bu komut ile iki işlem yapabilirsiniz. Bir tanesi adından da anlaşılacağı üzere move yani taşıma işlemi, diğeri de herhangi bir dosyanın adını değiştirmeye yaramaktadır. 
+
+Taşıma için 
 ~~~ {.bash}
-$ mv
+$ mv dosya2.txt ../../hello_world
+~~~
+İsim değiştirmek için
+~~~ {.bash}
+$ mv dosya2.txt yeni_dosya.txt
 ~~~
 
+İki şekilde de kullanabilirsiniz.
 
 
 
