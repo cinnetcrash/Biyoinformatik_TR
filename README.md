@@ -1,5 +1,5 @@
-# Simple automation with Bash Scripting
-## Shell
+# Bash Scripting ile Basit Otomasyon ve Sık Kullanılan Komutlar
+## Komut Satırı
 
 The **shell** is a command line interface program that allows you to control your computer with a keyboard rather than using your mouse and keyboard to control your computer through a graphical user interface (GUI). It may seem strange and difficult at first, but there are  many reasons master the shell.
 
@@ -8,24 +8,24 @@ The **shell** is a command line interface program that allows you to control you
 
 * Cloud computers can only be accessed through command line interfaces.
 
-## Basic Navigation Commands
 
-Bu komut herhangi bir dosya içerisinde bulunan bilgilerin en üst kısmında bulunan kısmını göremeyi sağlar.
+## Bu komut herhangi bir dosya içerisinde bulunan bilgilerin en üst kısmında bulunan kısmını göremeyi sağlar.
 
 ~~~ {.bash}
 $ head -5 dosyaadi.txt
 ~~~
-Bu komut ile "dosyaadi.txt" dosyasının ilk 5 satırını önizleyebilirsiniz.
+* Bu komut ile "dosyaadi.txt" dosyasının ilk 5 satırını önizleyebilirsiniz.
 
 
-"ls" komutu bulunduğunuz dizin içerisinde bulunan dosyları listelemeye yarar. Listelemek istediğiniz dosyada
-ekstra argümanlar kullanarak daha ayrıntılı bir listeleme yapabilirsiniz.
+## komutu bulunduğunuz dizin içerisinde bulunan dosyları listelemeye yarar. Listelemek istediğiniz dosyada
+## ekstra argümanlar kullanarak daha ayrıntılı bir listeleme yapabilirsiniz.
 
 ~~~ {.bash}
 $ ls -l
 ~~~
 
-"mkdir" komutu size bulunduğunuz dizin içersinde klasör oluşturmaya yardımcı olan bir komuttur.
+## mkdir
+Bu komut size bulunduğunuz dizin içersinde klasör oluşturmaya yardımcı olan bir komuttur.
 Bu komutu kullanarak birden fazla klasörü aynı anda oluşturabilirsiniz.
 
 ~~~ {.bash}
