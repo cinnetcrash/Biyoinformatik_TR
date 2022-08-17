@@ -134,22 +134,96 @@ $ mv dosya2.txt yeni_dosya.txt
 ## chmod
 
 ## su
-## sudo
-## sudo apt update / sudo apt-get update
-## sudo apt upgrade / sudo apt-get upgrade
-## df
-## history
-## wget
-## git 
-## exit
-## reboot
-## unzip
-## gunzip / gzip
-## tar
-## pd
-## top / htop
-## Kısayollar
 
+~~~ {.bash}
+$ mv dosya2.txt yeni_dosya.txt
+~~~
+
+## sudo
+
+~~~ {.bash}
+$ mv dosya2.txt yeni_dosya.txt
+~~~
+
+## sudo apt update / sudo apt-get update
+
+~~~ {.bash}
+$ mv dosya2.txt yeni_dosya.txt
+~~~
+
+## sudo apt upgrade / sudo apt-get upgrade
+
+~~~ {.bash}
+$ mv dosya2.txt yeni_dosya.txt
+~~~
+
+## df
+
+~~~ {.bash}
+$ mv dosya2.txt yeni_dosya.txt
+~~~
+
+## history
+
+~~~ {.bash}
+$ mv dosya2.txt yeni_dosya.txt
+~~~
+
+## wget
+
+~~~ {.bash}
+$ mv dosya2.txt yeni_dosya.txt
+~~~
+
+## git 
+
+~~~ {.bash}
+$ mv dosya2.txt yeni_dosya.txt
+~~~
+
+## exit
+~~~ {.bash}
+$ mv dosya2.txt yeni_dosya.txt
+~~~
+
+## reboot
+
+~~~ {.bash}
+$ mv dosya2.txt yeni_dosya.txt
+~~~
+
+## unzip
+
+~~~ {.bash}
+$ mv dosya2.txt yeni_dosya.txt
+~~~
+## gunzip / gzip
+
+~~~ {.bash}
+$ mv dosya2.txt yeni_dosya.txt
+~~~
+## tar
+
+~~~ {.bash}
+$ mv dosya2.txt yeni_dosya.txt
+~~~
+
+## pd
+
+
+~~~ {.bash}
+$ mv dosya2.txt yeni_dosya.txt
+~~~
+## top / htop
+
+~~~ {.bash}
+$ mv dosya2.txt yeni_dosya.txt
+~~~
+
+## Kısayollar
+~~~ {.bash}
+$ mv dosya2.txt yeni_dosya.txt
+~~~
 
 # Program Yükleme 
 ## Programları nereden bulabilirim?
