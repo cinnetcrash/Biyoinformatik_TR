@@ -1,43 +1,53 @@
 #!/bin/bash
 
-# Bioinformatics Pipeline for Nanopore Sequencing Data Analysis
-# This script includes quality checking, trimming, aligning using Minimap2, and generating a consensus genome.
-# Ensure that FastQC, Porechop, Minimap2, SAMtools, and bcftools are installed before running this script.
+# Nanopore Virüs Genomu Bioinformatik Analiz Pipeline Scripti
+# Bu script, FASTQ formatındaki ham nanopore verisinden başlayarak konsensüs genom oluşturma sürecini kapsar.
+# Scriptin çalışabilmesi için FastQC, cutadapt, Minimap2, SAMtools ve bcftools'un yüklü olması gerekmektedir.
 
-# Set the paths for data, results, and reference genome
-DATA_DIR="/path/to/your/data"
-RESULTS_DIR="/path/to/results"
-REF_GENOME="/path/to/reference/genome.fasta"
+# Veri, sonuç ve referans genom dosyalarının bulunduğu dizinlerin yollarını ayarlayın
+DATA_DIR="/home/cinnet/Desktop/2024_Exercise_Club/ham_veri/RUN29/barcode75"               # Ham veri dosyasının bulunduğu dizin
+RESULTS_DIR="sonuclar"              # Sonuçların kaydedileceği dizin
+REF_GENOME="/home/cinnet/Desktop/2024_Exercise_Club/fasta_referans_genom/sars-cov-2_genome.fasta" # Referans genom dosyasının bulunduğu dizin
 
-# Name of the Nanopore sequencing data file (FASTQ format)
-SEQ_DATA="sample.fastq"  # Replace with your file name
+# Nanopore ham veri dosyasının adı (FASTQ formatında)
+SEQ_DATA="dizi.fastq"  # Kendi dosya adınız ile değiştirin
 
-# Creating results directory if it doesn't exist
+# Kalite değeri (Q değeri) ve adapter ayarı
+QUALITY_VALUE=12
+  # Gerekirse adapter dizisini buraya girin
+
+# Sonuçlar dizini yoksa oluştur
 mkdir -p $RESULTS_DIR
 
-# Quality Check with FastQC
-echo "Running FastQC for quality check..."
+# FastQC ile Kalite Kontrolü
+echo "FastQC ile kalite kontrolü yapılıyor..."
 fastqc $DATA_DIR/$SEQ_DATA -o $RESULTS_DIR
 
-# Trimming with Porechop
-echo "Trimming sequencing data with Porechop..."
-porechop -i $DATA_DIR/$SEQ_DATA -o $RESULTS_DIR/trimmed_$SEQ_DATA
+# cutadapt ile Trimming (Kırpma)
+echo "cutadapt ile veri kırpılıyor..."
+cutadapt -q $QUALITY_VALUE -o $RESULTS_DIR/trimmed_$SEQ_DATA $DATA_DIR/$SEQ_DATA
 
-# Aligning Sequences with Minimap2
-echo "Aligning sequences with Minimap2..."
+# Minimap2 ile Dizileme (Alignment)
+echo "Minimap2 ile dizileme yapılıyor..."
 minimap2 -ax map-ont $REF_GENOME $RESULTS_DIR/trimmed_$SEQ_DATA > $RESULTS_DIR/aligned.sam
 
-# Processing Aligned Data with SAMtools
-echo "Processing aligned data with SAMtools..."
+# SAMtools ile Dizilenmiş Verilerin İşlenmesi
+echo "SAMtools ile dizilenmiş veriler işleniyor..."
 samtools view -bS $RESULTS_DIR/aligned.sam > $RESULTS_DIR/aligned.bam
 samtools sort $RESULTS_DIR/aligned.bam -o $RESULTS_DIR/sorted_aligned.bam
 samtools index $RESULTS_DIR/sorted_aligned.bam
 
-# Generating Consensus Genome
-echo "Generating consensus genome..."
-samtools mpileup -uf $REF_GENOME $RESULTS_DIR/sorted_aligned.bam | bcftools call -c | vcfutils.pl vcf2fq > $RESULTS_DIR/consensus.fq
-seqtk seq -a $RESULTS_DIR/consensus.fq > $RESULTS_DIR/consensus.fa
+# Varyant Çağırma ve VCF Dosyası Oluşturma
+echo "Varyantlar çağrılıyor ve VCF dosyası oluşturuluyor..."
+bcftools mpileup -f $REF_GENOME $RESULTS_DIR/sorted_aligned.bam | bcftools call -mv -Ov > $RESULTS_DIR/variants.vcf
 
-# Pipeline Completion Message
-echo "Nanopore sequencing data analysis pipeline completed successfully."
+# VCF Dosyasını bgzip ile Sıkıştırma ve Indexleme
+echo "VCF dosyası sıkıştırılıyor ve indeksleniyor..."
+bgzip -c $RESULTS_DIR/variants.vcf > $RESULTS_DIR/variants.vcf.gz
+tabix -p vcf $RESULTS_DIR/variants.vcf.gz
 
+# Konsensüs Genomun Oluşturulması
+echo "Konsensüs genom oluşturuluyor..."
+cat $REF_GENOME | bcftools consensus $RESULTS_DIR/variants.vcf.gz > $RESULTS_DIR/consensus.fa
+
+echo "Nanopore virüs genomu analiz pipeline'ı başarıyla tamamlandı."
